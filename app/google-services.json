@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1089465004839",
+    "firebase_url": "https://cappamessenger.firebaseio.com",
+    "project_id": "cappamessenger",
+    "storage_bucket": "cappamessenger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089465004839:android:521f989b3b913f30",
+        "android_client_info": {
+          "package_name": "com.firebasecappa.cappamessenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089465004839-2fpop416b0eb194p5ife1vvufkrnkpor.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.firebasecappa.cappamessenger",
+            "certificate_hash": "dea916285056a79c2a29594e235507ca2662f6fa"
+          }
+        },
+        {
+          "client_id": "1089465004839-o3d1611bm541u8977vrq66843ujnjsf3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUENH3z8Kmnsx5VGDHX8s-O50yjf0ZcY0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089465004839-o3d1611bm541u8977vrq66843ujnjsf3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
