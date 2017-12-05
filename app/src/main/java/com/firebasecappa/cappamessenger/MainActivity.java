@@ -13,9 +13,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.GenericTypeIndicator;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -34,8 +42,36 @@ private  DatabaseReference myref = FirebaseDatabase.getInstance().getReference()
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+        myref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Week week = dataSnapshot.getValue(Week.class);
+                if (week != null) {
+                    System.out.println(week.getFriday());
+                } else System.out.println("null");
+            }
 
-        System.out.println("Test Logs");
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        myref.child("dev21").child("Mondey").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                GenericTypeIndicator<List<String >> monda= new GenericTypeIndicator<List<String>>(){};
+                List<String > one = dataSnapshot.getValue(monda);
+                for (int i = 0;i< one.size();i++)
+                    System.out.println(one.get(i));
+                //List<String>Monda= (List<String>) dataSnapshot.getValue();
+                //for(int i=0; i<Monda.size();i++) System.out.println(Monda.get(i));
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
