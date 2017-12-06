@@ -7,72 +7,70 @@ import java.util.List;
  */
 
 public class Week {
-    private Day mondey;
-    private Day tuesday;
-    private Day wednesday;
-    private Day thursday;
-    private Day friday;
-    private Day saturday;
+    private List<String> mondey;
+    private List<String> tuesday;
+    private List<String> wednesday;
+    private List<String> thursday;
+    private List<String> friday;
+    private List<String> saturday;
 
-    public Day getMondey() {
+    public List<String> getMondey() {
         return mondey;
     }
 
-    public void setMondey(Day mondey) {
+    public Week() {
+    }
+
+    public Week(List<String> mondey, List<String> tuesday, List<String> wednesday, List<String> thursday, List<String> friday, List<String> saturday) {
         this.mondey = mondey;
-    }
-
-    public Day getTuesday() {
-        return tuesday;
-    }
-
-    public void setTuesday(Day tuesday) {
         this.tuesday = tuesday;
-    }
-
-    public Day getWednesday() {
-        return wednesday;
-    }
-
-    public void setWednesday(Day wednesday) {
         this.wednesday = wednesday;
-    }
-
-    public Day getThursday() {
-        return thursday;
-    }
-
-    public void setThursday(Day thursday) {
         this.thursday = thursday;
-    }
-
-    public Day getFriday() {
-        return friday;
-    }
-
-    public void setFriday(Day friday) {
         this.friday = friday;
-    }
-
-    public Day getSaturday() {
-        return saturday;
-    }
-
-    public void setSaturday(Day saturday) {
         this.saturday = saturday;
     }
 
-    public class Day{
-        private List<String> dayList;
-
-        public List<String> getDayList() {
-            return dayList;
-        }
-
-        public void setDayList(List<String> dayList) {
-            this.dayList = dayList;
-        }
+    public void setMondey(List<String> mondey) {
+        this.mondey = mondey;
     }
 
+    public List<String> getTuesday() {
+        return tuesday;
+    }
 
+    public void setTuesday(List<String> tuesday) {
+        this.tuesday = tuesday;
+    }
+
+    public List<String> getWednesday() {
+        return wednesday;
+    }
+
+    public void setWednesday(List<String> wednesday) {
+        this.wednesday = wednesday;
+    }
+
+    public List<String> getThursday() {
+        return thursday;
+    }
+
+    public void setThursday(List<String> thursday) {
+        this.thursday = thursday;
+    }
+
+    public List<String> getFriday() {
+        return friday;
+    }
+
+    public void setFriday(List<String> friday) {
+        this.friday = friday;
+    }
+
+    public List<String> getSaturday() {
+        return saturday;
+    }
+
+    public void setSaturday(List<String> saturday) {
+        this.saturday = saturday;
+    }
 }
